@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo Rifa</title>
+    <link rel="stylesheet" href="sorteoderifa.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inabie Rifa</h1>
+        
+        <label for="fileInput">Adjuntar archivo (.txt, .csv, .pdf) con participantes:</label>
+        <input type="file" id="fileInput" accept=".txt,.csv,.pdf">
+
+        <label for="departmentFilter">Filtrar por Direccion:</label>
+        <select id="departmentFilter" disabled>
+            <option value="">Selecciona una Direccion</option>
+        </select>
+
+        <label for="winnerCount">Cantidad de ganadores:</label>
+        <input type="number" id="winnerCount" min="1" value="1" disabled>
+
+        <button id="startRaffle" disabled>Iniciar Sorteo</button>
+
+        <h2>Ganadores</h2>
+        <ul id="winnersList"></ul>
+
+        <h2>Participantes Restantes</h2>
+        <ul id="participantsList"></ul>
+    </div>
+
+    <script src="sorteoderifa.js"></script>
+</body>
+</html>
